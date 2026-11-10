@@ -5,9 +5,13 @@
 // Your father's WhatsApp number in international format
 // (NO + sign, NO spaces, NO dashes)
 // Example for India: 919876543210
-export const WHATSAPP_NUMBER = '917668042924'
+export const WHATSAPP_NUMBER = '919897700760'
 
 export const STORE_NAME = 'Shafi Kirana Store'
+
+// Shop address (shown in footer / on the site)
+export const SHOP_ADDRESS = 'Hazrat Nagar, Noorpur Bijnor, Uttar Pradesh 246734'
+export const SHOP_LANDMARK = 'KMM Memorial Hospital, Noorpur, Bijnor'
 
 // Shop Instagram page (shown in the header)
 export const INSTAGRAM_URL = 'https://www.instagram.com/shafi_kirana_store'
