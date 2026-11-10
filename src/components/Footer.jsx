@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { STORE_NAME } from '../config'
+import { STORE_NAME, SHOP_ADDRESS, SHOP_LANDMARK } from '../config'
 
 export default function Footer() {
   return (
@@ -25,6 +25,21 @@ export default function Footer() {
               Fresh groceries delivered locally. Place your order on WhatsApp — pay
               when you receive your items.
             </p>
+            <div className="mt-4 flex items-start gap-2.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-600 shrink-0 mt-0.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <div className="text-sm text-slate-600 leading-relaxed">
+                <p className="font-semibold text-brand-800 text-xs uppercase tracking-wider mb-1">
+                  Visit / Delivery area
+                </p>
+                <p>{SHOP_ADDRESS}</p>
+                <p className="text-xs text-slate-500 mt-1">
+                  🏥 Landmark: {SHOP_LANDMARK}
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Quick links */}
