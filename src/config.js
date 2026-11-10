@@ -28,6 +28,6 @@ export const OWNER_PHOTO = '/owner.jpg'
 // Create it with: node scripts/seed-mongo.mjs  (see MONGODB.md)
 // Do NOT put the password here — it is hashed in the database.
 
-// Used when a product has no image
+// Used when a product has no image (sharp 5:3 crop for product cards)
 export const PLACEHOLDER_IMAGE =
-  'https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&h=400&fit=crop'
+  'https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=720&fit=crop&q=80'
