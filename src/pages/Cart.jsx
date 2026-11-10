@@ -210,7 +210,7 @@ export default function Cart() {
             </div>
             <div className="flex-1">
               <h2 className="font-display font-extrabold text-slate-900 text-base">
-                Message for the Shop/ Description of Items you ordered
+                Message for the Shop/ Description of Items (Optional)
               </h2>
               <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
                 Please specify any additional details about your order, if applicable.
