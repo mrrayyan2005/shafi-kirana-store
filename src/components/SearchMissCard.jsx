@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useCart } from '../context/CartContext'
+import { PLACEHOLDER_IMAGE } from '../config'
 
 /**
  * Yellow "We might have this" card. Lets the customer add any item
@@ -46,14 +47,18 @@ export default function SearchMissCard({ name = '', autoFill = true }) {
   return (
     <div className="product-card group bg-white rounded-2xl border-2 border-amber-200 shadow-soft overflow-hidden flex flex-col">
       {/* Image area with yellow "might have it" badge */}
-      <div className="relative aspect-[5/3] overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center">
-        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-amber-100 text-amber-500 flex items-center justify-center">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20 20-3-3" />
-            <path d="M11 8v6M8 11h6" />
-          </svg>
-        </div>
+      <div className="relative aspect-[5/3] overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+        <img
+          src={PLACEHOLDER_IMAGE}
+          alt=""
+          loading="lazy"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none'
+          }}
+        />
+        {/* Soft yellow tint so it still feels like a special card */}
+        <div className="absolute inset-0 bg-amber-300/15" />
 
         {/* Yellow mark */}
         <div className="absolute top-2 left-2 right-2">
@@ -74,7 +79,7 @@ export default function SearchMissCard({ name = '', autoFill = true }) {
             {itemName.trim() || 'Add any item'}
           </h3>
           <p className="text-xs text-slate-400 mt-1">
-            we may have this item — add it to your cart and check with the shop.
+            We may have this item — add it to your cart and check with the shop.
           </p>
         </div>
 
