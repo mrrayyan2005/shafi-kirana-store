@@ -5,7 +5,7 @@
 // Your father's WhatsApp number in international format
 // (NO + sign, NO spaces, NO dashes)
 // Example for India: 919876543210
-export const WHATSAPP_NUMBER = '919897700760'
+export const WHATSAPP_NUMBER = '917668042924'
 
 export const STORE_NAME = 'Shafi Kirana Store'
 
