@@ -74,7 +74,7 @@ export default function SearchMissCard({ name = '', autoFill = true }) {
             {itemName.trim() || 'Add any item'}
           </h3>
           <p className="text-xs text-slate-400 mt-1">
-            we May have this item — add it to your cart and check with the shop.
+            we may have this item — add it to your cart and check with the shop.
           </p>
         </div>
 
