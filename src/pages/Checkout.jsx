@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext'
 import CustomerForm from '../components/CustomerForm'
 import { validateCustomer } from '../utils/validate'
 import { buildOrderMessage, openWhatsApp } from '../utils/whatsapp'
+import { SHOP_ADDRESS, SHOP_LANDMARK } from '../config'
 
 export default function Checkout() {
   const { items, message, setMessage, clear } = useCart()
@@ -98,6 +99,13 @@ export default function Checkout() {
         <p className="text-slate-500 text-sm mt-1">
           Fill your details and add a message for the shop.
         </p>
+        <div className="mt-3 rounded-2xl border border-brand-100 bg-brand-50/60 px-3.5 py-2.5">
+          <p className="text-[10px] font-bold text-brand-700 uppercase tracking-wider">
+            We deliver from
+          </p>
+          <p className="text-sm text-slate-700 font-medium mt-0.5">{SHOP_ADDRESS}</p>
+          <p className="text-xs text-slate-500 mt-0.5">🏥 Landmark: {SHOP_LANDMARK}</p>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -113,10 +121,11 @@ export default function Checkout() {
               </div>
               <div className="flex-1">
                 <h2 className="font-display font-extrabold text-slate-900 text-base">
-                  Message for the Shop/ Description of the Items (Optional)
+                  Message for the Shop
                 </h2>
                 <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
-                  Please specify any additional details about your order, if applicable.
+                  Items may be out of stock. Tell us what to do — we&apos;ll read
+                  this message.
                 </p>
               </div>
             </div>
