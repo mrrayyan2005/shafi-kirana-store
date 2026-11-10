@@ -4,7 +4,7 @@ import { useProducts } from '../hooks/useProducts'
 import { CATEGORIES } from '../data/categories'
 import ProductCard from '../components/ProductCard'
 import SearchMissCard from '../components/SearchMissCard'
-import { STORE_NAME } from '../config'
+import { STORE_NAME, SHOP_ADDRESS, SHOP_LANDMARK } from '../config'
 
 export default function Home() {
   const [query, setQuery] = useState('')
@@ -63,6 +63,18 @@ export default function Home() {
               </p>
               <p className="mt-1.5 text-accent-200 text-[12px] sm:text-[13px]">
                 We&apos;re still working on this website for you.
+              </p>
+              <p className="mt-1.5 flex items-start gap-1.5 text-white/80 text-[11px] sm:text-[12px] leading-snug">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5 text-brand-300">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>
+                  {SHOP_ADDRESS}
+                  <span className="block text-white/65 text-[10px] sm:text-[11px]">
+                    🏥 Near {SHOP_LANDMARK}
+                  </span>
+                </span>
               </p>
             </div>
 
